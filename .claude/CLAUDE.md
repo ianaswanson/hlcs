@@ -8,23 +8,29 @@ R&D workshop for developing HLCS (Human-LLM Collaborative Systems) navigation in
 
 ## Core Framework Reference
 
-**Critical:** Read these framework documents at start of HLCS work:
+**CRITICAL - CHECK MEMORY FIRST:**
 
-- **@.claude/memory/human-llm-collaborative-system-pattern.md** - The 5-tier HLCS model
-- **@.claude/memory/navigation-instruments-framework.md** - The sailing metaphor and 7-phase development process
+These files are **automatically loaded** in `.claude/memory/` and contain the foundational frameworks:
 
-These define the foundation for all HLCS instrument development.
+- **human-llm-collaborative-system-pattern.md** - The 5-tier HLCS model (Schema, Knowledge, Data, Interaction, Presentation)
+- **navigation-instruments-framework.md** - The sailing metaphor and 7-phase instrument development process
 
-**Source of truth:** `/docs/patterns/` (these are copies for convenient context loading)
+**Before starting any work:** Verify you have loaded and understood these frameworks. They define the foundation for all HLCS instrument development.
+
+**Also available at company level:**
+- `claudian/.claude/memory/company-core.md` - Claudian operating principles and standards
+
+**Source of truth:** `/docs/patterns/` at company level (memory files are copies for convenient context loading)
 
 ---
 
 ## Session Protocol
 
 ### Start of Session
-1. **Read** `@../SESSION.md` - current focus and context
-2. **Check** `@../CHANGELOG.md` - recent progress
-3. **Review** relevant instrument folder for context
+1. **Verify memory loaded** - Confirm you have the HLCS and Navigation frameworks from `.claude/memory/`
+2. **Read** `SESSION.md` - current focus and context
+3. **Check** `CHANGELOG.md` - recent progress
+4. **Review** relevant instrument folder for context
 
 ### During Session
 - Synthesize methodology into knowledge layers

@@ -1,31 +1,27 @@
 # HLCS Development - Current Session
 
 **Last Updated:** November 27, 2025
-**Current Focus:** Session Complete - Course (Roadmap) integrated into Compass
+**Current Focus:** Infrastructure improvement - Enhanced session startup protocol
 
 ---
 
 ## Session Summary
 
-**COMPLETE:** Course (Roadmap) instrument development through Phase 2 (Foundation + Ian's Spin).
+**COMPLETE:** Meta-infrastructure improvement to session startup protocol.
 
-**Key Resolution:** Compass is a **compound instrument** with two complementary components:
+**Problem Addressed:**
+- Memory files containing foundational frameworks weren't being reliably checked at session start
+- CLAUDE.md guidance was too passive ("Read these" vs. "CHECK THIS FIRST")
 
-```
-COMPASS
-  ├── DESTINATION (Canvas) - Business case/thesis
-  └── COURSE (Roadmap) - Execution plan
-```
+**Changes Made:**
+- Updated `.claude/CLAUDE.md` with stronger "CHECK MEMORY FIRST" emphasis
+- Made explicit that memory files are auto-loaded (no manual Read needed)
+- Added "Verify memory loaded" as first step in Session Protocol
+- Listed actual filenames and brief descriptions for clarity
 
-**Major Accomplishments:**
-- Extracted strategy framework from Jackson-60 conversation (5 months ago)
-- Documented Ian's rigor on Now/Next/Later (language progression + artifact types)
-- Created comprehensive Course knowledge layer (methodology synthesis)
-- Designed formal JSON schemas for both Destination and Course
-- Created canonical Trello example across both components
-- Established clean naming convention for examples
+**Previous Session (Nov 26):** Compass instrument complete through Phase 2 (Foundation + Ian's Spin)
 
-**Status:** Compass instrument now has complete documentation, schemas, and examples for both components.
+**Compass Status:** Complete documentation, schemas, and examples for both components (Destination + Course)
 
 ---
 
@@ -37,6 +33,8 @@ COMPASS
 - [x] Document Ian's rigor additions to Now/Next/Later (Jenna Bastok's framework)
 - [x] Create Course knowledge layer v0.1
 - [x] Extract schema from roadmap template
+- [x] Improve session startup protocol (CLAUDE.md updates)
+- [ ] Validate session startup improvements (test with fresh conversation)
 - [ ] Migrate existing content to new structure
 - [ ] Map Course instrument to navigation framework (Phase 2)
 - [ ] Validate Course knowledge layer with Ian

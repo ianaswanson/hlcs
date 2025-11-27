@@ -111,6 +111,31 @@ This log tracks the evolution of the HLCS sailing framework through conversation
 
 ---
 
+## 2025-11-27
+
+### Meta: Improved Session Startup Protocol
+
+**Problem Identified:**
+- Memory files (HLCS pattern, Navigation framework) are automatically loaded in `.claude/memory/`
+- But CLAUDE.md guidance wasn't strong enough to ensure Claude verified these frameworks first
+- Led to sessions starting without proper context loading
+
+**Solution Implemented:**
+- Updated `.claude/CLAUDE.md` "Core Framework Reference" section:
+  - Changed from "Read these" to "CHECK MEMORY FIRST" with stronger emphasis
+  - Clarified that files are automatically loaded (not manual Read required)
+  - Listed explicit filenames and brief descriptions
+  - Added reference to company-core.md availability
+- Updated Session Protocol to make "Verify memory loaded" the first step
+- This ensures future sessions will check framework understanding before starting work
+
+**Impact:**
+- Better session startup reliability
+- Clearer checklist for Claude to follow
+- Reduces risk of working without foundational context
+
+---
+
 ## 2025-11-25 (approximate)
 
 ### Compass Knowledge Layer v1
