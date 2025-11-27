@@ -1,0 +1,224 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://claudian.dev/schemas/compass/destination.json",
+  "title": "Destination (Canvas) Schema",
+  "description": "Business case and market positioning",
+  "version": "3.0.0",
+  "type": "object",
+  "required": ["vision", "pitch", "customer", "problem", "solution", "unique_value", "timing", "market", "revenue"],
+  "properties": {
+    "vision": {
+      "type": "string",
+      "description": "Prose statement - why you come to work. Foundational, inspirational. This is the poetry that motivates the team."
+    },
+    "pitch": {
+      "type": "object",
+      "description": "Moore template - the clinical positioning statement",
+      "required": ["for", "who", "product_name", "is_a", "that", "unlike", "our_product"],
+      "properties": {
+        "for": {
+          "type": "string",
+          "description": "Target customer"
+        },
+        "who": {
+          "type": "string",
+          "description": "Statement of need/opportunity"
+        },
+        "product_name": {
+          "type": "string",
+          "description": "Name of the product"
+        },
+        "is_a": {
+          "type": "string",
+          "description": "Product category"
+        },
+        "that": {
+          "type": "string",
+          "description": "Key benefit"
+        },
+        "unlike": {
+          "type": "string",
+          "description": "Primary alternative"
+        },
+        "our_product": {
+          "type": "string",
+          "description": "Primary differentiation"
+        }
+      }
+    },
+    "customer": {
+      "type": "object",
+      "description": "Who exactly are we serving?",
+      "required": ["buyer", "user"],
+      "properties": {
+        "buyer": {
+          "type": "string",
+          "description": "Who pays?"
+        },
+        "user": {
+          "type": "string",
+          "description": "Who uses?"
+        },
+        "champion": {
+          "type": "string",
+          "description": "Who advocates internally?"
+        },
+        "characteristics": {
+          "type": "array",
+          "description": "Key traits of target customer",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "problem": {
+      "type": "object",
+      "description": "Highest level - sum of all product value",
+      "required": ["description", "big_enough"],
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "What's the core problem?"
+        },
+        "current_alternatives": {
+          "type": "array",
+          "description": "How do they solve it today?",
+          "items": {
+            "type": "string"
+          }
+        },
+        "why_alternatives_fail": {
+          "type": "string",
+          "description": "Why existing solutions aren't good enough"
+        },
+        "big_enough": {
+          "type": "string",
+          "description": "Is this worth building a business around? Articulate why this isn't a vitamin."
+        }
+      }
+    },
+    "solution": {
+      "type": "object",
+      "description": "What are we building?",
+      "required": ["what_we_build"],
+      "properties": {
+        "what_we_build": {
+          "type": "string",
+          "description": "What are we building? (high level)"
+        },
+        "key_capabilities": {
+          "type": "array",
+          "description": "Core capabilities that solve the problem",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "unique_value": {
+      "type": "object",
+      "description": "Why would they choose us?",
+      "required": ["differentiation", "hard_to_copy"],
+      "properties": {
+        "differentiation": {
+          "type": "string",
+          "description": "Why would they choose us?"
+        },
+        "hard_to_copy": {
+          "type": "string",
+          "description": "What's our moat? What's hard to replicate?"
+        }
+      }
+    },
+    "timing": {
+      "type": "object",
+      "description": "Why NOW is the right time",
+      "required": ["thesis"],
+      "properties": {
+        "thesis": {
+          "type": "string",
+          "description": "Why NOW is the right time"
+        },
+        "factors": {
+          "type": "array",
+          "description": "Market/tech/regulatory factors creating opportunity",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "market": {
+      "type": "object",
+      "description": "Where are we playing?",
+      "required": ["beachhead"],
+      "properties": {
+        "landscape": {
+          "type": "array",
+          "description": "Who else is in this space?",
+          "items": {
+            "type": "string"
+          }
+        },
+        "beachhead": {
+          "type": "string",
+          "description": "Where do we start? (initial market segment)"
+        },
+        "size": {
+          "type": "string",
+          "description": "Total addressable market / opportunity size"
+        }
+      }
+    },
+    "revenue": {
+      "type": "object",
+      "description": "How do we make money?",
+      "required": ["pricing_model"],
+      "properties": {
+        "pricing_model": {
+          "type": "string",
+          "description": "How do we charge? (subscription, usage, etc.)"
+        },
+        "price_point": {
+          "type": "string",
+          "description": "What's the price?"
+        },
+        "cost_drivers": {
+          "type": "array",
+          "description": "What are the main costs?",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unit_economics": {
+          "type": "string",
+          "description": "Does the math work? (LTV/CAC, margins, etc.)"
+        }
+      }
+    },
+    "truths": {
+      "type": "array",
+      "description": "What do we KNOW is true? (validated facts)",
+      "items": {
+        "type": "string"
+      }
+    },
+    "bets": {
+      "type": "array",
+      "description": "What are we BETTING is true? (unvalidated assumptions)",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "_notes": {
+    "usage": [
+      "Vision lives here (foundational), Course references it",
+      "This is relatively stable (changes with pivots)",
+      "Audience: C-suite, investors, strategic partners",
+      "Purpose: Validate business viability, communicate thesis",
+      "Complements Course (Roadmap) which handles execution planning"
+    ]
+  }
+}

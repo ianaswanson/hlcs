@@ -1,0 +1,120 @@
+{
+  "_meta": {
+    "title": "Trello - Destination (Canvas)",
+    "description": "Canonical example for HLCS methodology artifacts. Plausible founding story for Trello circa 2011. Optimized for teaching, not historical accuracy.",
+    "version": "1.0",
+    "last_updated": "2025-11-27"
+  },
+  "vision": "Work should be visible. When you can see everything laid out in front of you - what's done, what's happening, what's next - collaboration stops feeling like coordination overhead and starts feeling like flow. We believe the simple act of moving a card from 'Doing' to 'Done' should feel satisfying, that teams deserve tools that fade into the background and let the work shine through. We're building the whiteboard that travels with you, the sticky note that never falls off, the shared brain for any team doing anything.",
+  "pitch": {
+    "for": "Small teams and individuals managing projects",
+    "who": "Need to track work and collaborate without heavyweight tools",
+    "product_name": "Trello",
+    "is_a": "Visual collaboration tool",
+    "that": "Makes work visible and progress tangible with zero learning curve",
+    "unlike": "Basecamp, spreadsheets, and traditional project management software",
+    "our_product": "Is instantly usable - no training, no setup, no configuration required"
+  },
+  "customer": {
+    "buyer": "Team lead, startup founder, or department head who controls tool decisions",
+    "user": "Individual contributors and team members doing the actual work",
+    "champion": "The productivity enthusiast who discovers Trello and introduces it to their team",
+    "characteristics": [
+      "Tech-comfortable but not necessarily developers",
+      "Frustrated with current tools being too rigid or too complex",
+      "Work in small teams (2-15 people)",
+      "Value speed and flexibility over comprehensive features",
+      "Often tried and abandoned other project management tools"
+    ]
+  },
+  "problem": {
+    "description": "Teams can't see their work. Project status lives in people's heads, buried in spreadsheets, scattered across email threads, or stuck on whiteboards that don't travel. This invisibility creates constant 'what's the status?' interruptions, duplicated effort, dropped balls, and a persistent low-grade anxiety about whether things are actually getting done.",
+    "current_alternatives": [
+      "Spreadsheets - flexible but not visual, hard to collaborate, get stale",
+      "Physical whiteboards and sticky notes - visual but don't travel, can't share remotely",
+      "Basecamp - comprehensive but heavyweight, learning curve, opinionated workflow",
+      "Email threads - ubiquitous but chaotic, no status visibility, things get lost",
+      "Nothing - keep it all in your head, ask people constantly"
+    ],
+    "why_alternatives_fail": "Existing tools force a choice: either powerful-but-complex (Basecamp, MS Project) or simple-but-limited (spreadsheets, sticky notes). The powerful tools require commitment - training, setup, workflow decisions - that small teams won't make for 'just tracking some tasks.' The simple tools lack collaboration and real-time visibility. Nothing sits in the sweet spot of 'powerful enough AND instantly usable.'",
+    "big_enough": "Basecamp has paying customers proving teams will pay for collaboration tools. Project management software is a validated category. But adoption is limited by complexity - most teams try these tools and abandon them. The gap between 'people who need to track work' and 'people using work-tracking tools' is massive. We're not competing for Basecamp's customers; we're expanding the market to everyone who gave up on project management software."
+  },
+  "solution": {
+    "what_we_build": "Web-based kanban boards for any kind of work",
+    "key_capabilities": [
+      "Create unlimited boards, lists, and cards",
+      "Drag-and-drop cards between lists",
+      "Real-time collaboration - see changes as they happen",
+      "Comments and attachments on cards",
+      "Works in any browser, no installation",
+      "Free to use (core features)"
+    ]
+  },
+  "unique_value": {
+    "differentiation": "Instantly usable. No training required. No setup wizard. No workflow configuration. You see a board, you understand it. You can teach someone Trello in 30 seconds by showing them your screen. This isn't a feature - it's the entire product philosophy. Every feature request gets evaluated against 'does this make Trello harder to understand in the first 30 seconds?'",
+    "hard_to_copy": "Simplicity is the hardest thing to copy. Every competitor will be tempted to add features. Product managers justify their existence by shipping features. Sales teams want checkboxes for RFP comparisons. Our moat is the discipline to say no - to keep Trello simple while others make their products complex. This is a cultural moat, not a technical one."
+  },
+  "timing": {
+    "thesis": "The browser just became powerful enough. HTML5, WebSockets, and modern JavaScript frameworks make it possible to build rich, real-time applications that feel native. Two years ago, the drag-and-drop experience we need wasn't possible in a browser. Two years from now, everyone will be building this. Right now, we can be first.",
+    "factors": [
+      "Technology: Browser capabilities (drag-and-drop, real-time sync via WebSockets) just matured",
+      "Behavioral: Startup boom creating thousands of small teams needing lightweight tools",
+      "Market: Freemium model proven by Dropbox, Evernote - users accept free-to-paid conversion",
+      "Competitive gap: Basecamp proved the market but remains complex; no simple visual alternative exists",
+      "Distribution: Joel Spolsky's audience (Joel on Software) provides launch platform"
+    ]
+  },
+  "market": {
+    "landscape": [
+      "Basecamp - established, respected, but heavyweight and opinionated",
+      "Asana - emerging, task-focused, less visual",
+      "Spreadsheets (Google Sheets, Excel) - ubiquitous but not purpose-built",
+      "Physical tools (whiteboards, sticky notes) - visual but not digital",
+      "Vertical tools (Jira, Pivotal) - powerful but developer-specific"
+    ],
+    "beachhead": "Small tech teams and startups. They're comfortable with new web tools, frustrated with existing options, have urgency to move fast, and will spread the word to other teams. Not enterprise (too slow to adopt), not individuals only (need collaboration to prove value).",
+    "size": "TAM is 'everyone who manages work' - effectively unlimited but meaningless. Beachhead is ~500K small tech teams globally. If 10% adopt and 5% of those convert to paid, that's 2,500 paying teams. At $100/mo average, that's $3M ARR from beachhead alone before expansion."
+  },
+  "revenue": {
+    "pricing_model": "Freemium. Core product free forever - unlimited boards, lists, cards, and collaborators. Paid tiers for power features: integrations, larger attachments, admin controls, priority support. The free tier must be genuinely useful, not crippled. We're betting on volume and conversion, not artificial limitations.",
+    "price_point": "TBD - launching free, will introduce paid tiers based on usage patterns. Expecting $5-10/user/month for 'Pro' tier when we understand what power users actually need.",
+    "cost_drivers": [
+      "Hosting and infrastructure (scales with usage)",
+      "Development team (4-6 engineers)",
+      "Minimal support initially (product should be self-explanatory)"
+    ],
+    "unit_economics": "Unknown pre-launch. Key metrics to establish: free-to-paid conversion rate, time-to-conversion, cost per free user, LTV of paid users. Hypothesis: free users cost ~$0.50/month to serve, paid users worth $50+ LTV, need 10% conversion to be viable."
+  },
+  "truths": [
+    "Fog Creek has resources to fund 18+ months of development without revenue pressure",
+    "Joel Spolsky has a large, engaged audience (distribution advantage at launch)",
+    "We have engineering talent capable of shipping polished web applications",
+    "Freemium is a proven model - Dropbox, Evernote, Spotify have validated it",
+    "The kanban pattern is proven in software development contexts",
+    "Real-time collaboration in browsers is now technically feasible",
+    "Our target users are already online and comfortable adopting web tools"
+  ],
+  "bets": [
+    "Simplicity beats features for our target market at this moment",
+    "Visual/spatial organization is universally appealing, not just for developers",
+    "People will use a free tool enough to eventually pay for premium features",
+    "The 'boards and cards' metaphor is intuitive enough to need no explanation",
+    "Word of mouth will be our primary acquisition channel (not sales or ads)",
+    "Teams will trust a web app with their work data (security perception)",
+    "Free users create paid users through collaboration invites",
+    "We can maintain simplicity discipline as the company grows"
+  ],
+  "_notes": {
+    "canon_usage": [
+      "This fictional Trello represents a plausible 2011 founding story",
+      "Use it consistently across all methodology examples:",
+      "- Compass Destination: This document",
+      "- Compass Course: TBD (will define Goals, Strategy, Now/Next/Later)",
+      "- Story Map: User journey through Trello (boards, lists, cards, collaboration)",
+      "- Schema examples: Trello data structures",
+      "- Knowledge layer: Good/bad examples reference Trello",
+      "When adding to the canon, maintain internal consistency",
+      "When the canon conflicts with methodology needs, update canon"
+    ]
+  }
+}

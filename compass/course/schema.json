@@ -1,0 +1,420 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://claudian.dev/schemas/course/roadmap.json",
+  "title": "Course Roadmap Schema",
+  "description": "Strategic roadmap structure connecting vision to execution via goals and time-horizoned planning",
+  "version": "0.1.0",
+  "type": "object",
+  "required": ["meta", "strategic", "execution"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "description": "Roadmap metadata",
+      "required": ["productName", "owner", "lastUpdated"],
+      "properties": {
+        "productName": {
+          "type": "string",
+          "description": "Name of the product/service this roadmap covers"
+        },
+        "owner": {
+          "type": "string",
+          "description": "Team or person responsible for this roadmap"
+        },
+        "lastUpdated": {
+          "type": "string",
+          "format": "date",
+          "description": "Last update date (YYYY-MM-DD)"
+        },
+        "quarter": {
+          "type": "string",
+          "description": "Current quarter (e.g., 'Q1 2025')",
+          "pattern": "^Q[1-4] \\d{4}$"
+        }
+      }
+    },
+    "strategic": {
+      "type": "object",
+      "description": "Strategic layer (stable, 1-5 years)",
+      "required": ["vision", "strategy", "goals"],
+      "properties": {
+        "vision": {
+          "type": "object",
+          "description": "5+ year aspirational future state",
+          "required": ["statement", "timeHorizon"],
+          "properties": {
+            "statement": {
+              "type": "string",
+              "description": "Vision narrative focusing on human transformation, not technology. Should be audacious, inspirational, human-focused, and specific."
+            },
+            "timeHorizon": {
+              "type": "string",
+              "description": "Time horizon for vision (e.g., '5+ years')",
+              "default": "5+ years"
+            },
+            "userScenarios": {
+              "type": "array",
+              "description": "Optional: Specific user scenarios that illustrate the vision",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "strategy": {
+          "type": "object",
+          "description": "2-5 year decision-making compass",
+          "required": ["diagnosis", "guidingPrinciples"],
+          "properties": {
+            "timeHorizon": {
+              "type": "string",
+              "description": "Time horizon for strategy",
+              "default": "2-5 years"
+            },
+            "diagnosis": {
+              "type": "object",
+              "description": "Problem diagnosis - what's systematically broken",
+              "required": ["statement"],
+              "properties": {
+                "statement": {
+                  "type": "string",
+                  "description": "Core diagnosis of current state problems. Focus on patterns and root causes, not symptoms."
+                },
+                "assumptions": {
+                  "type": "array",
+                  "description": "Current assumptions that don't match user reality",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "constraints": {
+                  "type": "object",
+                  "description": "Distinction between artificial and real constraints",
+                  "properties": {
+                    "artificial": {
+                      "type": "array",
+                      "description": "Process-based constraints that could be changed",
+                      "items": {"type": "string"}
+                    },
+                    "real": {
+                      "type": "array",
+                      "description": "Legal or resource constraints that are fixed",
+                      "items": {"type": "string"}
+                    }
+                  }
+                }
+              }
+            },
+            "guidingPrinciples": {
+              "type": "array",
+              "description": "Decision-making criteria that hold for 2-5 years. Compass-level, not initiative-level.",
+              "minItems": 2,
+              "maxItems": 5,
+              "items": {
+                "type": "string",
+                "description": "A guiding principle for decision-making. Should pass the compass test: guides decisions even when technology changes, helps choose between initiatives, explains WHY not WHAT."
+              }
+            },
+            "focusAreas": {
+              "type": "array",
+              "description": "Broad domains where initiatives will emerge. Not specific solutions.",
+              "items": {
+                "type": "string",
+                "description": "A focus area (e.g., 'Services requiring in-person visits', 'Multi-agency user journeys')"
+              }
+            },
+            "tradeoffs": {
+              "type": "array",
+              "description": "Explicit choices about what NOT to do to maintain strategic focus",
+              "items": {
+                "type": "string",
+                "description": "A conscious tradeoff or deferral"
+              }
+            }
+          }
+        },
+        "goals": {
+          "type": "array",
+          "description": "1-2 year user behavior change evidence that strategy is working",
+          "minItems": 2,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "description", "metric"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "Unique identifier for this goal (e.g., 'goal-1', 'language-access')",
+                "pattern": "^[a-z0-9-]+$"
+              },
+              "name": {
+                "type": "string",
+                "description": "Short name for the goal (used in roadmap grid headers)",
+                "maxLength": 50
+              },
+              "description": {
+                "type": "string",
+                "description": "Full description of the user behavior change this goal targets"
+              },
+              "metric": {
+                "type": "object",
+                "description": "How this goal will be measured",
+                "required": ["name", "unit"],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the metric being tracked"
+                  },
+                  "unit": {
+                    "type": "string",
+                    "description": "Unit of measurement (e.g., 'percentage', 'count', 'score')"
+                  },
+                  "direction": {
+                    "type": "string",
+                    "enum": ["increase", "decrease"],
+                    "description": "Desired direction of change"
+                  },
+                  "baseline": {
+                    "type": ["number", "null"],
+                    "description": "Starting measurement (null if not yet established)"
+                  },
+                  "lastQuarter": {
+                    "type": ["number", "null"],
+                    "description": "Measurement from last quarter"
+                  },
+                  "current": {
+                    "type": ["number", "null"],
+                    "description": "Current measurement"
+                  },
+                  "target": {
+                    "type": ["number", "null"],
+                    "description": "Target value (null if using directional change only)"
+                  }
+                }
+              },
+              "timeHorizon": {
+                "type": "string",
+                "description": "Time horizon for achieving this goal",
+                "default": "1-2 years"
+              },
+              "strategicConnection": {
+                "type": "string",
+                "description": "How this goal connects to strategy focus areas"
+              },
+              "progressStatus": {
+                "type": "string",
+                "enum": ["starting", "concerning", "good", "issues"],
+                "description": "Current progress status for visual indicators"
+              }
+            }
+          }
+        }
+      }
+    },
+    "execution": {
+      "type": "object",
+      "description": "Execution layer (dynamic, quarterly)",
+      "required": ["horizons", "capacityAllocation"],
+      "properties": {
+        "horizons": {
+          "type": "object",
+          "description": "Time-horizoned work organized by goal",
+          "required": ["now", "next", "later"],
+          "properties": {
+            "now": {
+              "type": "object",
+              "description": "NOW = Deliverables (planned for release this quarter)",
+              "additionalProperties": {
+                "type": "array",
+                "description": "Array of deliverables for this goal (key = goal ID)",
+                "items": {
+                  "$ref": "#/definitions/deliverable"
+                }
+              }
+            },
+            "next": {
+              "type": "object",
+              "description": "NEXT = Solutions (solutioning, next quarter)",
+              "additionalProperties": {
+                "type": "array",
+                "description": "Array of solutions for this goal (key = goal ID)",
+                "items": {
+                  "$ref": "#/definitions/solution"
+                }
+              }
+            },
+            "later": {
+              "type": "object",
+              "description": "LATER = Investigations (problems to explore)",
+              "additionalProperties": {
+                "type": "array",
+                "description": "Array of investigations for this goal (key = goal ID)",
+                "items": {
+                  "$ref": "#/definitions/investigation"
+                }
+              }
+            }
+          }
+        },
+        "capacityAllocation": {
+          "type": "object",
+          "description": "Capacity allocation percentages",
+          "required": ["strategic", "smallRequests", "operational"],
+          "properties": {
+            "strategic": {
+              "type": "number",
+              "description": "Percentage allocated to strategic initiatives (goal-connected work)",
+              "minimum": 0,
+              "maximum": 100,
+              "default": 60
+            },
+            "smallRequests": {
+              "type": "number",
+              "description": "Percentage allocated to small requests/tactical work",
+              "minimum": 0,
+              "maximum": 100,
+              "default": 20
+            },
+            "operational": {
+              "type": "number",
+              "description": "Percentage allocated to operational/maintenance work",
+              "minimum": 0,
+              "maximum": 100,
+              "default": 20
+            }
+          }
+        },
+        "smallRequests": {
+          "type": "array",
+          "description": "Small requests that don't require strategic planning",
+          "items": {
+            "type": "string",
+            "description": "Brief description of small request (editor support, quick fix, usability improvement)"
+          }
+        },
+        "operationalWork": {
+          "type": "array",
+          "description": "Operational work to keep services running",
+          "items": {
+            "type": "string",
+            "description": "Brief description of operational work (maintenance, security, routine responsibilities)"
+          }
+        },
+        "mandatedWork": {
+          "type": "array",
+          "description": "Required/compliance work not tied to strategic goals",
+          "items": {
+            "type": "object",
+            "required": ["description"],
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Description of mandated work"
+              },
+              "source": {
+                "type": "string",
+                "description": "Source of mandate (e.g., 'Legal requirement', 'Executive directive')"
+              },
+              "horizon": {
+                "type": "string",
+                "enum": ["now", "next", "later"],
+                "description": "When this mandated work is planned"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "deliverable": {
+      "type": "object",
+      "description": "NOW horizon item - concrete deliverable being released this quarter",
+      "required": ["name", "description"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the deliverable (concrete, specific)"
+        },
+        "description": {
+          "type": "string",
+          "description": "What is being released to users. Use concrete delivery language."
+        },
+        "goalId": {
+          "type": "string",
+          "description": "ID of the goal this deliverable advances"
+        },
+        "releaseDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Planned release date"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["planning", "in-progress", "testing", "ready"],
+          "description": "Current status of deliverable"
+        }
+      }
+    },
+    "solution": {
+      "type": "object",
+      "description": "NEXT horizon item - solution being designed to create user value",
+      "required": ["name", "description", "problemSolved"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the solution (value-focused)"
+        },
+        "description": {
+          "type": "string",
+          "description": "User value being created. Use solution language (clear problem with defined approach)."
+        },
+        "problemSolved": {
+          "type": "string",
+          "description": "What user problem this solution addresses"
+        },
+        "goalId": {
+          "type": "string",
+          "description": "ID of the goal this solution advances"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["discovery", "design", "validation"],
+          "description": "Current phase of solutioning work"
+        }
+      }
+    },
+    "investigation": {
+      "type": "object",
+      "description": "LATER horizon item - problem space to explore",
+      "required": ["name", "description", "researchQuestions"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the investigation (exploratory)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Problem space being explored. Use investigative language."
+        },
+        "researchQuestions": {
+          "type": "array",
+          "description": "Specific research questions to answer",
+          "items": {
+            "type": "string"
+          }
+        },
+        "goalId": {
+          "type": "string",
+          "description": "ID of the goal this investigation relates to"
+        },
+        "learningGoals": {
+          "type": "array",
+          "description": "What we need to learn before committing to action",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

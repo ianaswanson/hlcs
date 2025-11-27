@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Roadmap Template</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .roadmap-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        .outcomes-header {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #e8f4fd;
+            border-radius: 8px;
+        }
+        
+        .outcome {
+            text-align: center;
+            font-weight: 600;
+            color: #2980b9;
+        }
+        
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: 80px 120px 1fr 1fr 1fr;
+            gap: 2px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .header-cell {
+            background: #34495e;
+            color: white;
+            padding: 12px 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .capacity-cell {
+            background: #ecf0f1;
+            padding: 20px 8px;
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .work-type-cell {
+            background: #bdc3c7;
+            padding: 20px 8px;
+            text-align: center;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .outcome-cell {
+            background: #f8f9fa;
+            padding: 15px 12px;
+            text-align: center;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .strategic-cell {
+            background: #e3f2fd;
+            padding: 15px 12px;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .strategic-cell-next {
+            background: #e3f2fd;
+            padding: 15px 12px;
+        }
+        
+        .strategic-cell-later {
+            background: #e3f2fd;
+            padding: 15px 12px;
+        }
+        
+        .small-requests-cell {
+            background: #f3e5f5;
+            padding: 15px 12px;
+            text-align: center;
+            border-left: 4px solid #9c27b0;
+        }
+        
+        .tech-maintenance-cell {
+            background: #fff3e0;
+            padding: 15px 12px;
+            text-align: center;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .template-item {
+            background: #f8f9fa;
+            margin: 4px 0;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 1.3;
+            color: #6c757d;
+            font-style: italic;
+            border: 1px dashed #dee2e6;
+        }
+        
+        .mandated-item {
+            background: #ffebee;
+            margin: 4px 0;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 1.3;
+            border-left: 3px solid #f44336;
+        }
+        
+        .annotations {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        .annotation-left {
+            text-align: left;
+            flex: 1;
+        }
+        
+        .annotation-right {
+            text-align: right;
+            flex: 1;
+        }
+        
+        .percentage {
+            font-size: 18px;
+            color: #2c3e50;
+        }
+        
+        .work-type {
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="roadmap-container">
+        <div class="title">[Your Service Name] Digital Service Roadmap</div>
+        
+        <!-- Vision Section -->
+        <div style="margin-bottom: 25px; padding: 20px; background: #e8f4fd; border-radius: 8px; border-left: 4px solid #2196f3;">
+            <div style="font-weight: bold; color: #2c3e50; margin-bottom: 10px; font-size: 16px;">VISION (5+ years)</div>
+            <div style="color: #6c757d; line-height: 1.4; font-style: italic;">Write your "sci-fi future" vision here. Focus on the user outcome without constraints or metrics. What does seamless service delivery look like for your community? Keep it pure and aspirational - this guides everything below.</div>
+        </div>
+        
+        <!-- Strategy Section -->
+        <div style="margin-bottom: 25px; padding: 20px; background: #f0f8e8; border-radius: 8px; border-left: 4px solid #4caf50;">
+            <div style="font-weight: bold; color: #2c3e50; margin-bottom: 15px; font-size: 16px;">STRATEGY</div>
+            
+            <div style="margin-bottom: 12px;">
+                <div style="color: #6c757d; line-height: 1.4; font-size: 14px; font-style: italic;">What's the current problem? Why are users struggling? What's designed around government needs vs. user needs?</div>
+            </div>
+            
+            <div style="margin-bottom: 12px;">
+                <div style="color: #6c757d; line-height: 1.4; font-size: 14px; font-style: italic;">How will you provide better end-to-end service? What are you choosing to focus on to improve the complete user experience?</div>
+            </div>
+            
+            <div>
+                <div style="font-weight: 600; color: #2c3e50; margin-bottom: 6px;">Approach:</div>
+                <div style="color: #6c757d; line-height: 1.4; font-size: 14px; font-style: italic;">
+                    • List 3-5 specific actions that support your strategy<br>
+                    • Consider technology, staff, process, and political elements<br>
+                    • Include how you'll address constraints and risks<br>
+                    • Ensure coherence - how do these actions work together?
+                </div>
+            </div>
+        </div>
+        
+        <!-- Goals Section -->
+        <div style="margin-bottom: 25px; padding: 20px; background: #fff3e0; border-radius: 8px; border-left: 4px solid #ff9800;">
+            <div style="font-weight: bold; color: #2c3e50; margin-bottom: 15px; font-size: 16px;">GOALS (1-2 years)</div>
+            
+            <div style="margin-bottom: 15px; padding: 10px; background: #fafafa; border-radius: 4px;">
+                <div style="color: #6c757d; line-height: 1.4; font-size: 14px; font-style: italic;">
+                    Goals should focus on specific user behavior changes that indicate strategic success. Include measurable outcomes with baselines and targets. Prioritize public value creation while considering internal user needs that enable better service delivery.
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 12px;">
+                <div style="color: #6c757d; line-height: 1.4; font-size: 14px; font-style: italic;">
+                    <strong>Goal 1:</strong> Describe the specific user behavior change, measurable outcome, current baseline, and target you're aiming for
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 12px;">
+                <div style="color: #6c757d; line-height: 1.4; font-size: 14px; font-style: italic;">
+                    <strong>Goal 2:</strong> Describe another behavior change that indicates strategic progress, with clear success criteria and timeline
+                </div>
+            </div>
+            
+            <div>
+                <div style="color: #6c757d; line-height: 1.4; font-size: 14px; font-style: italic;">
+                    <strong>Goal 3:</strong> Describe an internal user goal that enables public value (staff satisfaction, process efficiency, etc.)
+                </div>
+            </div>
+        </div>
+        
+        <div class="outcomes-header">
+            <div style="text-align: center; font-weight: bold; margin-bottom: 15px; color: #2c3e50;">Goal Progress Tracking</div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 1fr auto auto auto auto auto; gap: 10px; margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+            <div style="font-weight: bold; color: #2c3e50;">Goal</div>
+            <div style="font-weight: bold; color: #2c3e50; text-align: center; width: 60px;">Started</div>
+            <div style="font-weight: bold; color: #2c3e50; text-align: center; width: 60px;">Last</div>
+            <div style="font-weight: bold; color: #2c3e50; text-align: center; width: 60px;">Current</div>
+            <div style="font-weight: bold; color: #2c3e50; text-align: center; width: 60px;">Target</div>
+            <div style="font-weight: bold; color: #2c3e50; text-align: center; width: 60px;">Progress</div>
+            
+            <div style="color: #6c757d; font-weight: 400; font-style: italic;">Short version of Goal 1</div>
+            <div style="text-align: center; color: #7f8c8d;">Baseline</div>
+            <div style="text-align: center; color: #7f8c8d;">Last quarter</div>
+            <div style="text-align: center; color: #7f8c8d;">Current</div>
+            <div style="text-align: center; color: #7f8c8d;">Target</div>
+            <div style="text-align: center; font-size: 16px; color: #6c757d;">●</div>
+            
+            <div style="color: #6c757d; font-weight: 400; font-style: italic;">Short version of Goal 2</div>
+            <div style="text-align: center; color: #7f8c8d;">Baseline</div>
+            <div style="text-align: center; color: #7f8c8d;">Last quarter</div>
+            <div style="text-align: center; color: #7f8c8d;">Current</div>
+            <div style="text-align: center; color: #7f8c8d;">Target</div>
+            <div style="text-align: center; font-size: 16px; color: #6c757d;">●</div>
+            
+            <div style="color: #6c757d; font-weight: 400; font-style: italic;">Short version of Goal 3</div>
+            <div style="text-align: center; color: #7f8c8d;">Baseline</div>
+            <div style="text-align: center; color: #7f8c8d;">Last quarter</div>
+            <div style="text-align: center; color: #7f8c8d;">Current</div>
+            <div style="text-align: center; color: #7f8c8d;">Target</div>
+            <div style="text-align: center; font-size: 16px; color: #6c757d;">●</div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 200px 1fr 1fr 1fr; gap: 2px; margin-bottom: 10px;">
+            <div></div>
+            <div style="text-align: center; font-size: 12px; color: #7f8c8d; padding: 5px;">Next Quarter</div>
+            <div style="text-align: center; font-size: 12px; color: #7f8c8d; padding: 5px;">Next Half</div>
+            <div style="text-align: center; font-size: 12px; color: #7f8c8d; padding: 5px;">Beyond</div>
+        </div>
+        
+        <div class="roadmap-grid">
+            <!-- Headers -->
+            <div class="header-cell">Capacity<br>(Time)</div>
+            <div class="header-cell">Goal<br>Connection</div>
+            <div class="header-cell">Now<br><span style="font-size: 10px; font-style: italic;">(Planned for Release)</span></div>
+            <div class="header-cell">Next<br><span style="font-size: 10px; font-style: italic;">(Solutioning)</span></div>
+            <div class="header-cell">Later<br><span style="font-size: 10px; font-style: italic;">(Problems to Explore)</span></div>
+            
+            <!-- Goal 1 Row -->
+            <div class="capacity-cell" style="grid-row: span 3;">
+                <div class="percentage">60%</div>
+                <div style="font-size: 12px; color: #7f8c8d; margin-top: 8px;">Strategic<br>Initiatives</div>
+            </div>
+            <div class="work-type-cell">
+                Goal 1:<br>[Goal 1 short<br>description]
+            </div>
+            <div class="strategic-cell">
+                <div class="template-item">Goal 1 concrete deliverables this quarter</div>
+                <div class="template-item">Goal 1 features being launched</div>
+            </div>
+            <div class="strategic-cell-next">
+                <div class="template-item">Goal 1 solutions being designed</div>
+            </div>
+            <div class="strategic-cell-later">
+                <div class="template-item">Goal 1 problems to investigate</div>
+            </div>
+            
+            <!-- Goal 2 Row -->
+            <div class="work-type-cell">
+                Goal 2:<br>[Goal 2 short<br>description]
+            </div>
+            <div class="strategic-cell">
+                <div class="template-item">Goal 2 concrete deliverables this quarter</div>
+            </div>
+            <div class="strategic-cell-next">
+                <div class="template-item">Goal 2 solutions being designed</div>
+                <div class="template-item">Goal 2 user value being created</div>
+            </div>
+            <div class="strategic-cell-later">
+                <div class="template-item">Goal 2 problems to explore</div>
+            </div>
+            
+            <!-- Goal 3 Row -->
+            <div class="work-type-cell">
+                Goal 3:<br>[Goal 3 short<br>description]
+            </div>
+            <div class="strategic-cell">
+                
+            </div>
+            <div class="strategic-cell-next">
+                
+            </div>
+            <div class="strategic-cell-later">
+                <div class="template-item">Goal 3 problems to investigate</div>
+                <div class="mandated-item" style="color: #6c757d; font-style: italic;">Required: [Mandated work not tied to goals]</div>
+            </div>
+            
+            <!-- Small Requests Row -->
+            <div class="capacity-cell">
+                <div class="percentage">20%</div>
+            </div>
+            <div class="work-type-cell">
+                Small<br>Requests
+            </div>
+            <div class="small-requests-cell" style="grid-column: span 3;">
+                <div style="color: #6c757d; font-style: italic;">Small Requests - Editor support, quick fixes, usability improvements, tactical requests that don't require strategic planning</div>
+            </div>
+            
+            <!-- Operational Work Row -->
+            <div class="capacity-cell">
+                <div class="percentage">20%</div>
+            </div>
+            <div class="work-type-cell">
+                Operational<br>Work
+            </div>
+            <div class="tech-maintenance-cell" style="grid-column: span 3;">
+                <div style="color: #6c757d; font-style: italic;">Operational Work - System maintenance, content updates, security patches, routine responsibilities, process improvements that keep services running</div>
+            </div>
+        </div>
+        
+        <div class="annotations">
+            <div class="annotation-left">
+                <strong>Progress Circles:</strong><br>
+                ● Grey (starting/no data)<br>
+                ● Yellow (concerning/behind)<br>
+                ● Green (good progress)<br>
+                ● Red (significant issues)
+            </div>
+            <div class="annotation-right">
+                <strong>Organization:</strong><br>
+                One row per goal shows all work<br>
+                advancing that outcome<br><br>
+                <strong>Language Progression:</strong><br>
+                Now: Concrete delivery<br>
+                Next: User value being created<br>
+                Later: Problems to explore
+            </div>
+        </div>
+    </div>
+</body>
+</html>

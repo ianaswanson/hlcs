@@ -1,0 +1,263 @@
+{
+  "_meta": {
+    "title": "Trello - Course (Roadmap)",
+    "description": "Strategic roadmap for Trello circa 2011. Complements the Destination example. Plausible founding story optimized for teaching, not historical accuracy.",
+    "version": "1.0",
+    "last_updated": "2025-11-27",
+    "quarter": "Q2 2011"
+  },
+  "meta": {
+    "productName": "Trello",
+    "owner": "Fog Creek Software / Trello Team",
+    "lastUpdated": "2011-06-15",
+    "quarter": "Q2 2011"
+  },
+  "strategic": {
+    "vision": {
+      "statement": "Work should be visible. When you can see everything laid out in front of you - what's done, what's happening, what's next - collaboration stops feeling like coordination overhead and starts feeling like flow. We believe the simple act of moving a card from 'Doing' to 'Done' should feel satisfying, that teams deserve tools that fade into the background and let the work shine through. We're building the whiteboard that travels with you, the sticky note that never falls off, the shared brain for any team doing anything.",
+      "timeHorizon": "5+ years",
+      "userScenarios": [
+        "Small startup team coordinates product launch entirely through Trello boards",
+        "Remote team members collaborate seamlessly across time zones without status meetings",
+        "Non-technical teams (marketing, operations) adopt Trello as naturally as tech teams"
+      ]
+    },
+    "strategy": {
+      "timeHorizon": "2-3 years",
+      "diagnosis": {
+        "statement": "Project management tools have failed small teams not because of missing features, but because of forced complexity. Teams abandon Basecamp, Jira, and MS Project not because these tools can't do what they need, but because the cognitive overhead of using them exceeds the value of tracking the work. The 30-second learning curve is not a nice-to-have - it's the entire problem we're solving.",
+        "assumptions": [
+          "Current tools assume teams want comprehensive project management when most just want visible work tracking",
+          "Existing freemium products (Dropbox, Evernote) prove users will start free and convert to paid if genuinely useful",
+          "The browser is now capable enough for drag-and-drop that feels native"
+        ],
+        "constraints": {
+          "artificial": [
+            "Training requirements (we can eliminate these)",
+            "Setup/configuration overhead (we can eliminate this)",
+            "Feature complexity (we choose simplicity)"
+          ],
+          "real": [
+            "Browser performance limits (can't match native app speed)",
+            "Network latency for real-time sync",
+            "Fog Creek funding timeline (~18 months to revenue)"
+          ]
+        }
+      },
+      "guidingPrinciples": [
+        "When choosing between features and simplicity, we choose simplicity - every new capability must not increase cognitive load for first-time users",
+        "We'll know we're successful when people teach Trello to colleagues in under 60 seconds without documentation",
+        "Our approach to product decisions: if it requires explaining in the UI, we haven't designed it simply enough",
+        "Word-of-mouth growth over paid acquisition - the product experience is our marketing"
+      ],
+      "focusAreas": [
+        "Core board/list/card interaction - make drag-and-drop feel effortless and immediate",
+        "Real-time collaboration - multiple people on the same board must feel like magic",
+        "Zero-friction onboarding - from landing page to productive use in under 2 minutes",
+        "Freemium conversion discovery - understand what power users actually need and will pay for"
+      ],
+      "tradeoffs": [
+        "We will not build Gantt charts, time tracking, or resource management - that's enterprise PM territory we're avoiding",
+        "We will not add workflow automation or complex rules - teams should adapt Trello to their process, not configure Trello",
+        "We will defer mobile apps until web product is proven - focus beats breadth in year one",
+        "We will not pursue enterprise sales - small teams are our beachhead, enterprise comes later"
+      ]
+    },
+    "goals": [
+      {
+        "id": "activation",
+        "name": "User Activation",
+        "description": "Increase in users who create their first board and add at least 3 cards within 24 hours of signup, indicating they understand the product and find immediate value",
+        "metric": {
+          "name": "24-hour activation rate",
+          "unit": "percentage",
+          "direction": "increase",
+          "baseline": null,
+          "lastQuarter": null,
+          "current": null,
+          "target": null
+        },
+        "timeHorizon": "12-18 months",
+        "strategicConnection": "Validates our zero-friction onboarding focus area - if users don't activate immediately, our simplicity thesis fails",
+        "progressStatus": "starting"
+      },
+      {
+        "id": "collaboration",
+        "name": "Team Collaboration",
+        "description": "Increase in boards with 2+ active collaborators (multiple people making changes in a 7-day period), indicating Trello is being used for real team coordination",
+        "metric": {
+          "name": "Multi-user board percentage",
+          "unit": "percentage",
+          "direction": "increase",
+          "baseline": null,
+          "lastQuarter": null,
+          "current": null,
+          "target": null
+        },
+        "timeHorizon": "12-18 months",
+        "strategicConnection": "Tests real-time collaboration focus area - Trello only wins if teams collaborate on boards, not individuals working alone",
+        "progressStatus": "starting"
+      },
+      {
+        "id": "retention",
+        "name": "90-Day Retention",
+        "description": "Increase in teams still actively using Trello 90 days after first board creation, indicating the product has lasting value beyond initial curiosity",
+        "metric": {
+          "name": "90-day active retention",
+          "unit": "percentage",
+          "direction": "increase",
+          "baseline": null,
+          "lastQuarter": null,
+          "current": null,
+          "target": null
+        },
+        "timeHorizon": "18-24 months",
+        "strategicConnection": "Ultimate test of our simplicity discipline - complex tools get abandoned, simple tools become habit",
+        "progressStatus": "starting"
+      }
+    ]
+  },
+  "execution": {
+    "horizons": {
+      "now": {
+        "activation": [
+          {
+            "name": "Launch public beta with Joel on Software announcement",
+            "description": "Release Trello to Joel Spolsky's audience with invitation system to control initial load",
+            "goalId": "activation",
+            "releaseDate": "2011-09-15",
+            "status": "in-progress"
+          },
+          {
+            "name": "Onboarding template boards (3 examples)",
+            "description": "Pre-built template boards for common use cases: product roadmap, marketing calendar, personal todo",
+            "goalId": "activation",
+            "releaseDate": "2011-08-30",
+            "status": "planning"
+          }
+        ],
+        "collaboration": [
+          {
+            "name": "Real-time cursor indicators",
+            "description": "Show who else is viewing the board with live cursor positions for co-presence awareness",
+            "goalId": "collaboration",
+            "releaseDate": "2011-09-01",
+            "status": "testing"
+          }
+        ],
+        "retention": []
+      },
+      "next": {
+        "activation": [
+          {
+            "name": "Improve first-board experience",
+            "description": "Users can create useful boards faster by better default list names and inline suggestions",
+            "problemSolved": "New users stare at blank board wondering what to put in lists - analysis shows 30% bounce at this step",
+            "goalId": "activation",
+            "status": "discovery"
+          }
+        ],
+        "collaboration": [
+          {
+            "name": "Enable frictionless board sharing",
+            "description": "Team members can invite others to boards via email/link without recipient needing to sign up first",
+            "problemSolved": "Collaboration requires all members to create accounts upfront - creates friction when someone just wants to share work",
+            "goalId": "collaboration",
+            "status": "design"
+          },
+          {
+            "name": "Activity feed on boards",
+            "description": "Board members see recent changes/comments/additions in a timeline showing what happened since they last looked",
+            "problemSolved": "When returning to an active board, users can't quickly see what changed - forces them to scan entire board",
+            "goalId": "collaboration",
+            "status": "design"
+          }
+        ],
+        "retention": [
+          {
+            "name": "Email digests for inactive users",
+            "description": "Users who haven't visited in 7 days receive digest of activity on their boards to pull them back",
+            "problemSolved": "Teams forget about Trello after initial setup - need to build habit of checking boards regularly",
+            "goalId": "retention",
+            "status": "discovery"
+          }
+        ]
+      },
+      "later": {
+        "activation": [
+          {
+            "name": "Investigate signup friction points",
+            "description": "Identify where users drop off between landing page and first useful board creation",
+            "researchQuestions": [
+              "What percentage reach signup form vs. leave from landing page?",
+              "How many start signup but don't complete it?",
+              "How many complete signup but never create a board?",
+              "How many create empty board but never add cards?"
+            ],
+            "goalId": "activation",
+            "learningGoals": [
+              "Quantify conversion funnel from landing → active user",
+              "Identify biggest drop-off point to prioritize improvements"
+            ]
+          }
+        ],
+        "collaboration": [
+          {
+            "name": "Understand premium collaboration features",
+            "description": "Explore what advanced collaboration needs exist that free users would pay to solve",
+            "researchQuestions": [
+              "What limitations do power teams hit with free Trello?",
+              "Which teams outgrow Trello vs. which teams scale with it?",
+              "What collaboration features do Basecamp/Asana have that users miss?",
+              "Would teams pay for better search, larger attachments, admin controls?"
+            ],
+            "goalId": "collaboration",
+            "learningGoals": [
+              "Define freemium line - what stays free vs. what becomes paid",
+              "Validate premium tier pricing and feature set"
+            ]
+          }
+        ],
+        "retention": [
+          {
+            "name": "Study abandonment patterns",
+            "description": "Understand why teams stop using Trello after initial adoption",
+            "researchQuestions": [
+              "What triggers a team to abandon an active board?",
+              "Do teams switch to competitors or abandon category entirely?",
+              "Is abandonment due to missing features or workflow mismatch?",
+              "Do teams abandon Trello or just specific boards?"
+            ],
+            "goalId": "retention",
+            "learningGoals": [
+              "Identify if retention is product issue or natural use case expiration",
+              "Determine if we can predict at-risk teams and intervene"
+            ]
+          }
+        ]
+      }
+    },
+    "capacityAllocation": {
+      "strategic": 70,
+      "smallRequests": 15,
+      "operational": 15
+    },
+    "smallRequests": [
+      "Add keyboard shortcuts documentation",
+      "Fix card attachment preview on Safari",
+      "Improve color contrast on card labels for accessibility"
+    ],
+    "operationalWork": [
+      "Server monitoring and performance optimization",
+      "Weekly data backups and disaster recovery testing",
+      "Security audit of authentication flow"
+    ],
+    "mandatedWork": [
+      {
+        "description": "Terms of Service and Privacy Policy updates per legal counsel",
+        "source": "Legal requirement for public launch",
+        "horizon": "now"
+      }
+    ]
+  }
+}
