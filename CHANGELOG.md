@@ -113,7 +113,7 @@ This log tracks the evolution of the HLCS sailing framework through conversation
 
 ## 2025-11-27
 
-### Meta: Improved Session Startup Protocol
+### Session 1: Improved Session Startup Protocol
 
 **Problem Identified:**
 - Memory files (HLCS pattern, Navigation framework) are automatically loaded in `.claude/memory/`
@@ -133,6 +133,24 @@ This log tracks the evolution of the HLCS sailing framework through conversation
 - Better session startup reliability
 - Clearer checklist for Claude to follow
 - Reduces risk of working without foundational context
+
+### Session 2: Verified Migration from Claude Desktop
+
+**Reviewed Claude Desktop conversation transfer:**
+- Confirmed Navigation Instruments Framework successfully migrated to `.claude/memory/`
+- Confirmed HLCS pattern migrated to `.claude/memory/`
+- Verified Compass Destination knowledge layer migrated to `compass/destination/knowledge-layer.md`
+- Verified Fictional Trello canon examples in place
+
+**Cleanup:**
+- Removed redundant files from `working/` folder:
+  - `compass-knowledge-layer-v1.md` (duplicate - canonical version in compass/destination/)
+  - `claude-desktop-conversation.md` (reviewed, content preserved)
+
+**Status:**
+- No information lost in Claude Desktop → Claude Code migration
+- All artifacts in canonical locations
+- Working folder clean and ready for new drafts
 
 ---
 
