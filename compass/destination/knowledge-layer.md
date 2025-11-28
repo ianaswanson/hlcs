@@ -48,7 +48,8 @@ The Compass constrains and informs all downstream work. A feature that contradic
 
 | Section | Core Question | Purpose |
 |---------|---------------|---------|
-| **Vision** | What's the pitch? | Compressed narrative (created last, shown first) |
+| **Vision** | Why do we come to work? | Inspirational prose (created last, shown first) |
+| **Pitch** | What's the elevator pitch? | Moore template - clinical positioning statement |
 | **Customer** | Who exactly? | The human "who" - buyer/user/champion |
 | **Problem** | What hurts? Is it big enough? | Pain + evidence of willingness to pay |
 | **Solution** | How do we solve it? | Our approach and what we build |
@@ -62,11 +63,42 @@ The Compass constrains and informs all downstream work. A feature that contradic
 
 ### Section Details
 
-#### Vision (The Pitch)
+#### Vision (The Inspiration)
+
+**Source:** Jeff Patton (product vision framing)
+
+The Vision is a prose statement about why you come to work - the inspirational future you're trying to create. It's the poetry that motivates the team.
+
+**Key Principle:** Created LAST (after working through all canvas elements), but shown FIRST (it's the hook when presenting to others).
+
+**Quality Criteria:**
+- **Audacious enough** to focus on what should be possible, not what current constraints allow
+- **Inspirational enough** to energize people beyond current frustrations
+- **Human enough** to connect with real community impact and lived experience
+- **Valuable enough** to maintain focus through changing priorities and leadership
+- **Specific enough** to guide strategic decisions without prescribing solutions
+
+**Test:** Does it describe human transformation, not technological capability?
+
+**Example (good):**
+> Work should be visible. When you can see everything laid out in front of you - what's done, what's happening, what's next - collaboration stops feeling like coordination overhead and starts feeling like flow. We believe the simple act of moving a card from 'Doing' to 'Done' should feel satisfying, that teams deserve tools that fade into the background and let the work shine through. We're building the whiteboard that travels with you, the sticky note that never falls off, the shared brain for any team doing anything.
+
+**Example (bad):**
+> We envision a future where technology helps people do things better and more efficiently.
+
+**Anti-patterns:**
+- Technology-focused instead of human-focused
+- Abstract jargon without specific scenarios
+- Features/capabilities instead of transformation
+- "Vision" that could describe any product in your category
+
+---
+
+#### Pitch (The Positioning Statement)
 
 **Source:** Geoffrey Moore's elevator pitch template from *Crossing the Chasm*
 
-The Vision is a compressed narrative that synthesizes all other Compass elements into a communicable pitch. It follows Moore's template:
+The Pitch is a clinical positioning statement that synthesizes all other Compass elements into a communicable pitch. It follows Moore's template:
 
 ```
 FOR [target customer]
@@ -77,7 +109,7 @@ UNLIKE [primary competitive alternative]
 OUR PRODUCT [statement of primary differentiation]
 ```
 
-**Key Principle:** Created LAST (after working through all canvas elements), but shown FIRST (it's the hook when presenting to others).
+**Vision vs Pitch:** Vision is the poetry (inspirational), Pitch is the positioning (clinical). Both are created last, both shown first, but serve different audiences and purposes.
 
 **Quality Criteria:**
 - Each blank filled with something specific and concrete
@@ -88,7 +120,7 @@ OUR PRODUCT [statement of primary differentiation]
 **Anti-patterns:**
 - Vague generalities ("helps people do things better")
 - Missing sections (unfilled blanks)
-- Incompatible with other Compass sections (vision says one thing, Problem says another)
+- Incompatible with other Compass sections (pitch says one thing, Problem says another)
 
 ---
 
@@ -354,7 +386,8 @@ A good Compass is:
 
 | Section | ✅ Good | ❌ Bad |
 |---------|---------|--------|
-| Vision | All blanks filled specifically | Vague, unfilled blanks |
+| Vision | Human transformation, audacious, specific | Technology-focused, abstract jargon |
+| Pitch | All blanks filled specifically | Vague, unfilled blanks |
 | Customer | Buyer/user/champion identified | Generic "customers" |
 | Problem | Evidence of WTP, real alternatives | Asserted without evidence |
 | Solution | Connected to problem | Technology-first |
@@ -399,10 +432,10 @@ A good Compass is:
 1. Work through canvas elements (Customer, Problem, Solution, etc.)
 2. Each element informs the others (iterate as understanding deepens)
 3. Truths & Bets crystallize through the process
-4. Vision statement created LAST as compression of everything above
+4. Vision and Pitch created LAST as compression of everything above
 
 **Display Order** (how you present it):
-1. Vision statement FIRST (the hook)
+1. Vision and Pitch FIRST (the hooks - Vision for inspiration, Pitch for positioning)
 2. Supporting elements provide evidence and depth
 3. Truths & Bets as grounding/honesty check
 
@@ -489,12 +522,15 @@ When making trade-offs, Claude Code can reference:
 ## Schema Reference (v3)
 
 ```yaml
-compass:
-  # THE PITCH (created last, shown first)
-  vision:
+destination:
+  # THE VISION (prose, inspirational - created last, shown first)
+  vision: ""                      # Prose statement about why you come to work
+
+  # THE PITCH (Moore template - created last, shown first)
+  pitch:
     for: ""                       # Target customer
-    who: ""                       # Statement of need/opportunity  
-    product_name: ""              
+    who: ""                       # Statement of need/opportunity
+    product_name: ""
     is_a: ""                      # Product category
     that: ""                      # Key benefit, reason to buy
     unlike: ""                    # Primary competitive alternative

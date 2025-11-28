@@ -13,15 +13,8 @@
     "quarter": "Q2 2011"
   },
   "strategic": {
-    "vision": {
-      "statement": "Work should be visible. When you can see everything laid out in front of you - what's done, what's happening, what's next - collaboration stops feeling like coordination overhead and starts feeling like flow. We believe the simple act of moving a card from 'Doing' to 'Done' should feel satisfying, that teams deserve tools that fade into the background and let the work shine through. We're building the whiteboard that travels with you, the sticky note that never falls off, the shared brain for any team doing anything.",
-      "timeHorizon": "5+ years",
-      "userScenarios": [
-        "Small startup team coordinates product launch entirely through Trello boards",
-        "Remote team members collaborate seamlessly across time zones without status meetings",
-        "Non-technical teams (marketing, operations) adopt Trello as naturally as tech teams"
-      ]
-    },
+    "visionReference": "Work should be visible. When you can see everything laid out in front of you - what's done, what's happening, what's next - collaboration stops feeling like coordination overhead and starts feeling like flow. We believe the simple act of moving a card from 'Doing' to 'Done' should feel satisfying, that teams deserve tools that fade into the background and let the work shine through. We're building the whiteboard that travels with you, the sticky note that never falls off, the shared brain for any team doing anything.",
+    "_visionNote": "Vision is owned by Destination (Canvas). This is a reference copy displayed for team context. Single source of truth = trello-destination.json",
     "strategy": {
       "timeHorizon": "2-3 years",
       "diagnosis": {
@@ -236,28 +229,6 @@
           }
         ]
       }
-    },
-    "capacityAllocation": {
-      "strategic": 70,
-      "smallRequests": 15,
-      "operational": 15
-    },
-    "smallRequests": [
-      "Add keyboard shortcuts documentation",
-      "Fix card attachment preview on Safari",
-      "Improve color contrast on card labels for accessibility"
-    ],
-    "operationalWork": [
-      "Server monitoring and performance optimization",
-      "Weekly data backups and disaster recovery testing",
-      "Security audit of authentication flow"
-    ],
-    "mandatedWork": [
-      {
-        "description": "Terms of Service and Privacy Policy updates per legal counsel",
-        "source": "Legal requirement for public launch",
-        "horizon": "now"
-      }
-    ]
+    }
   }
 }

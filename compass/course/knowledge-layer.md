@@ -20,7 +20,7 @@
 Course operates at **two distinct scales** that must remain separate:
 
 **Strategic Layer (Stable, 1-5 years):**
-- Vision (5+ years)
+- Vision (5+ years) - *Referenced from Destination, not owned*
 - Strategy (2-5 years)
 - Goals (1-2 years)
 
@@ -35,11 +35,11 @@ The **critical insight**: Strategy is the compass that guides decisions, not a l
 
 | Element | Source(s) | Ian's Adaptation |
 |---------|-----------|------------------|
-| Vision | Jeff Patton | "What SHOULD be" vs. "what CAN be" - audacious human transformation |
+| Vision Reference | Jeff Patton (via Destination) | Vision owned by Destination, displayed by Course for context |
 | Strategy | Rumelt (Good Strategy/Bad Strategy) + Lafley/Martin (Playing to Win) | "Strategy as compass" - decision framework, not destination list |
 | Goals | Melissa Perri (Escaping the Build Trap) + OKRs + Jeff Gothelf | User behavior change evidence, not output metrics |
 | Now/Next/Later | Jenna Bastok (ProdPad) | Language progression + artifact type differentiation (Deliverables/Solutions/Investigations) |
-| Roadmap Theory | 18F Product Guide | Integration of strategic and tactical layers |
+| Strategic/Execution Layers | Product management best practices | Clear separation of stable strategy (1-5 years) from dynamic execution (quarterly) |
 
 ### Relationship to Other Instruments
 
@@ -58,9 +58,10 @@ COMPASS (Destination + Course) → TELESCOPE → MAP → BLUEPRINT → SHIP
 ```
 
 **Course relationship to Destination:**
-- **Destination** (Canvas) defines: Market position, customer, problem/solution, unique value, business model, truths & bets
-- **Course** (Roadmap) defines: Vision, strategy, goals, time-horizoned execution (Now/Next/Later)
-- **Shared element:** Vision lives on Destination (foundational), Course references it for context
+- **Destination** (Canvas) defines: Vision, market position, customer, problem/solution, unique value, business model, truths & bets
+- **Course** (Roadmap) defines: Strategy, goals, time-horizoned execution (Now/Next/Later)
+- **Vision placement:** Vision is **owned by Destination** (foundational business thesis), **referenced by Course** (displayed for team context)
+- **Single source of truth:** Destination is the canonical home for Vision
 - **Boundary:** Destination = "where we're positioned", Course = "how we get there"
 
 **Course relationship to downstream instruments:**
@@ -75,19 +76,7 @@ COMPASS (Destination + Course) → TELESCOPE → MAP → BLUEPRINT → SHIP
 
 ### Quality Criteria
 
-#### Vision Quality
-
-**Audacious enough** to focus on what should be possible, not what current constraints allow
-
-**Inspirational enough** to energize people beyond current frustrations
-
-**Human enough** to connect with real community impact and lived experience
-
-**Valuable enough** to maintain focus through changing priorities and leadership
-
-**Specific enough** to guide strategic decisions without prescribing solutions
-
-**Test:** Does it describe human transformation, not technological capability?
+**Note:** For Vision quality criteria, see Destination knowledge layer (Vision is owned by Destination).
 
 #### Strategy Quality
 
@@ -153,30 +142,18 @@ The biggest challenge in roadmapping is **scale confusion**. The same work can b
 
 ### Creating the Strategic Layer
 
-#### 1. Vision (5+ years)
+#### 1. Vision Reference
 
-**Process:**
-1. Focus on human transformation, not technology
-2. Describe what SHOULD be possible (ignore current constraints)
-3. Paint specific user scenarios, not abstract concepts
-4. Keep it pure and aspirational
+**Note:** Vision is **owned by Destination (Canvas)** and only **referenced** by Course for team context.
 
-**Language to use:**
-- How people's lives will be different
-- What becomes possible that isn't now
-- Specific human scenarios (not "residents" but "Spanish-speaking immigrants", "seniors with disabilities")
+When creating the Course, you display the Vision from Destination at the top of the roadmap to:
+- Provide inspirational context for strategic decisions
+- Remind team of the long-term transformation goal
+- Connect day-to-day execution to foundational purpose
 
-**Language to avoid:**
-- Technology features
-- System capabilities
-- Process improvements
-- Abstract jargon ("Digital is a Public Service")
+**Single source of truth:** If Vision needs to be updated, it must be changed in Destination, not Course.
 
-**Example (good):**
-> Multnomah County residents seamlessly access any government service they need through intuitive digital experiences that work for everyone - from Spanish-speaking immigrants applying for benefits on their phones to seniors with disabilities navigating health services - with in-person visits only when they truly add value to the human experience.
-
-**Example (bad):**
-> Multnomah County envisions a future where Digital is a Public Service and it provides equitable access and opportunity.
+**For Vision creation guidance**, see Destination knowledge layer.
 
 #### 2. Strategy (2-5 years)
 
@@ -187,7 +164,7 @@ The biggest challenge in roadmapping is **scale confusion**. The same work can b
 4. State trade-offs explicitly (what won't we do?)
 
 **The three questions (Rumelt):**
-1. What's wrong with how we currently serve people? (diagnosis)
+1. What's wrong with the current state for our users? (diagnosis)
 2. What approach will create better outcomes? (guiding policy)
 3. How will these specific actions work together? (coherent action)
 
@@ -215,16 +192,16 @@ The biggest challenge in roadmapping is **scale confusion**. The same work can b
 - Which internal improvements to postpone for user value focus
 
 **Compass-level language (use this):**
-- "Eliminate steps that exist for government convenience rather than user needs"
-- "Treat user identity as a service asset, not a barrier"
-- "Design for how people actually access services (mobile, stressed, multitasking)"
+- "Eliminate steps that exist for our convenience rather than user needs"
+- "Make it work the way users actually work, not how we wish they worked"
+- "Choose simplicity over features when they conflict - every addition must not increase cognitive load"
 
 **Initiative-level language (avoid in strategy):**
-- "Redesign the permit application process"
-- "Implement single sign-on across all services"
-- "Create a mobile-first website"
+- "Redesign the onboarding flow"
+- "Implement real-time collaboration features"
+- "Build mobile apps for iOS and Android"
 
-#### 3. Goals (1-2 years)
+#### 2. Goals (1-2 years)
 
 **Process:**
 1. Identify what user behavior changes would prove strategy is working
@@ -236,8 +213,8 @@ The biggest challenge in roadmapping is **scale confusion**. The same work can b
 [Measurable change] in [user behavior] indicating [strategic success]
 
 **Examples (good):**
-- "Increase in non-English language page usage on Multco.us, indicating residents can successfully access services in their preferred language"
-- "Decrease in WCAG compliance violations across county web content, indicating improved accessibility for residents with disabilities"
+- "Increase in users who create their first board and add at least 3 cards within 24 hours of signup, indicating they understand the product and find immediate value" (activation goal)
+- "Increase in boards with 2+ active collaborators, indicating Trello is being used for real team coordination" (collaboration goal)
 
 **Examples (bad):**
 - "Launch new website" (output, not outcome)
@@ -252,7 +229,7 @@ Goals are leadership-owned targets that product manager figures out how to achie
 
 ### Creating the Execution Layer
 
-#### 4. Now/Next/Later Grid
+#### 3. Now/Next/Later Grid
 
 **Structure:**
 - One row per goal
@@ -293,9 +270,9 @@ Include required/compliance work explicitly, typically in LATER column for visib
 
 | Horizon | Language Type | Example |
 |---------|--------------|---------|
-| NOW | Concrete delivery | "Launch permit renewal self-service portal" |
-| NEXT | User value | "Enable small business owners to renew licenses without office visits" |
-| LATER | Problem exploration | "Investigate why 40% of permit applicants call for help instead of completing online" |
+| NOW | Concrete delivery | "Launch real-time cursor indicators for co-presence awareness" |
+| NEXT | User value | "Enable frictionless board sharing via email without requiring recipient signup" |
+| LATER | Problem exploration | "Investigate why 30% of new users bounce at the blank board step" |
 
 ### Integration Workflow
 
@@ -361,11 +338,12 @@ Include required/compliance work explicitly, typically in LATER column for visib
 
 ## VII. INTEGRATION WITH OTHER INSTRUMENTS
 
-**Inputs (from Compass/Destination):**
-- Mission statement
+**Inputs (from Destination):**
+- Vision (displayed for context)
 - Market positioning
 - Core values/principles
 - Strategic bets
+- Customer understanding
 
 **Outputs (to Telescope):**
 - Problem spaces to investigate (from LATER column)
@@ -412,7 +390,7 @@ Current template uses 60/20/20 split. Is this:
 - Example (teams should determine their own)?
 - Context-dependent (varies by org size, maturity, constraints)?
 
-**Current stance:** Example only, not prescriptive. 2-person + AI company has different needs than 50-person government team.
+**Current stance:** Example only, not prescriptive. A 2-person startup has different needs than a 50-person product team.
 
 ---
 

@@ -35,30 +35,11 @@
     "strategic": {
       "type": "object",
       "description": "Strategic layer (stable, 1-5 years)",
-      "required": ["vision", "strategy", "goals"],
+      "required": ["strategy", "goals"],
       "properties": {
-        "vision": {
-          "type": "object",
-          "description": "5+ year aspirational future state",
-          "required": ["statement", "timeHorizon"],
-          "properties": {
-            "statement": {
-              "type": "string",
-              "description": "Vision narrative focusing on human transformation, not technology. Should be audacious, inspirational, human-focused, and specific."
-            },
-            "timeHorizon": {
-              "type": "string",
-              "description": "Time horizon for vision (e.g., '5+ years')",
-              "default": "5+ years"
-            },
-            "userScenarios": {
-              "type": "array",
-              "description": "Optional: Specific user scenarios that illustrate the vision",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
+        "visionReference": {
+          "type": "string",
+          "description": "Reference to Vision from Destination (Canvas). Vision is owned by Destination and displayed here for context. Single source of truth = Destination."
         },
         "strategy": {
           "type": "object",
@@ -213,7 +194,7 @@
     "execution": {
       "type": "object",
       "description": "Execution layer (dynamic, quarterly)",
-      "required": ["horizons", "capacityAllocation"],
+      "required": ["horizons"],
       "properties": {
         "horizons": {
           "type": "object",
@@ -251,73 +232,6 @@
                 "items": {
                   "$ref": "#/definitions/investigation"
                 }
-              }
-            }
-          }
-        },
-        "capacityAllocation": {
-          "type": "object",
-          "description": "Capacity allocation percentages",
-          "required": ["strategic", "smallRequests", "operational"],
-          "properties": {
-            "strategic": {
-              "type": "number",
-              "description": "Percentage allocated to strategic initiatives (goal-connected work)",
-              "minimum": 0,
-              "maximum": 100,
-              "default": 60
-            },
-            "smallRequests": {
-              "type": "number",
-              "description": "Percentage allocated to small requests/tactical work",
-              "minimum": 0,
-              "maximum": 100,
-              "default": 20
-            },
-            "operational": {
-              "type": "number",
-              "description": "Percentage allocated to operational/maintenance work",
-              "minimum": 0,
-              "maximum": 100,
-              "default": 20
-            }
-          }
-        },
-        "smallRequests": {
-          "type": "array",
-          "description": "Small requests that don't require strategic planning",
-          "items": {
-            "type": "string",
-            "description": "Brief description of small request (editor support, quick fix, usability improvement)"
-          }
-        },
-        "operationalWork": {
-          "type": "array",
-          "description": "Operational work to keep services running",
-          "items": {
-            "type": "string",
-            "description": "Brief description of operational work (maintenance, security, routine responsibilities)"
-          }
-        },
-        "mandatedWork": {
-          "type": "array",
-          "description": "Required/compliance work not tied to strategic goals",
-          "items": {
-            "type": "object",
-            "required": ["description"],
-            "properties": {
-              "description": {
-                "type": "string",
-                "description": "Description of mandated work"
-              },
-              "source": {
-                "type": "string",
-                "description": "Source of mandate (e.g., 'Legal requirement', 'Executive directive')"
-              },
-              "horizon": {
-                "type": "string",
-                "enum": ["now", "next", "later"],
-                "description": "When this mandated work is planned"
               }
             }
           }

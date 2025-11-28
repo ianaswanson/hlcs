@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Compass Destination Canvas</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; max-width: 1400px; }
+        h1 { text-align: center; margin-bottom: 30px; }
+        .box { border: 2px solid black; padding: 15px; }
+        .box h3 { margin: 0 0 10px 0; font-size: 11px; font-weight: bold; }
+        .box p { margin: 5px 0; font-size: 12px; color: #666; }
+
+        /* Row 1 - Hero */
+        .row-vision { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 10px; }
+        .vision {
+            border: 3px solid black;
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* Row 2 - Value Prop */
+        .row-value { display: grid; grid-template-columns: 2fr 1fr 2fr; gap: 10px; margin-bottom: 10px; }
+        .problem { min-height: 250px; }
+        .unique-value { min-height: 250px; }
+        .middle-stack { display: flex; flex-direction: column; gap: 10px; height: 100%; }
+        .middle-stack .box { flex: 1; }
+
+        /* Row 3 - Market Context (equal thirds) */
+        .row-market { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+
+        /* Row 4 - Validation (equal halves) */
+        .row-validation { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+        .truths { border-style: solid; }
+        .bets { border-style: dashed; }
+    </style>
+</head>
+<body>
+    <h1>Compass Destination Canvas</h1>
+
+    <div class="row-vision">
+        <div class="box vision">
+            <h3>VISION</h3>
+            <p>Why you come to work. The poetry that motivates the team.</p>
+        </div>
+    </div>
+
+    <div class="row-value">
+        <div class="box problem">
+            <h3>PROBLEM</h3>
+            <p>What's the core problem?</p>
+            <p>How do they solve it today?</p>
+            <p>Why existing solutions fail</p>
+            <p>Is this big enough to matter?</p>
+        </div>
+
+        <div class="middle-stack">
+            <div class="box solution">
+                <h3>SOLUTION</h3>
+                <p>What we're building</p>
+                <p>Key capabilities</p>
+            </div>
+
+            <div class="box customer">
+                <h3>CUSTOMER</h3>
+                <p>Buyer / User / Champion</p>
+                <p>Key characteristics</p>
+            </div>
+        </div>
+
+        <div class="box unique-value">
+            <h3>UNIQUE VALUE PROPOSITION</h3>
+            <p>Why choose us?</p>
+            <p>What's our moat?</p>
+            <p>Hard to replicate</p>
+        </div>
+    </div>
+
+    <div class="row-market">
+        <div class="box timing">
+            <h3>TIMING</h3>
+            <p>Why now?</p>
+            <p>Market factors</p>
+        </div>
+
+        <div class="box market">
+            <h3>MARKET</h3>
+            <p>Beachhead</p>
+            <p>Landscape</p>
+            <p>Size (TAM)</p>
+        </div>
+
+        <div class="box revenue">
+            <h3>REVENUE MODEL</h3>
+            <p>Pricing | Price | Costs | Unit economics</p>
+        </div>
+    </div>
+
+    <div class="row-validation">
+        <div class="box truths">
+            <h3>TRUTHS (What We Know)</h3>
+            <p>Validated facts and evidence</p>
+        </div>
+
+        <div class="box bets">
+            <h3>BETS (What We're Betting)</h3>
+            <p>Unvalidated assumptions requiring testing</p>
+        </div>
+    </div>
+</body>
+</html>

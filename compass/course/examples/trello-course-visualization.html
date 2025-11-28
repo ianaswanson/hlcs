@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Course Roadmap</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; max-width: 1400px; }
+        h1 { text-align: center; margin-bottom: 30px; }
+        .box { border: 2px solid black; padding: 15px; margin-bottom: 10px; }
+        .box h3 { margin: 0 0 10px 0; font-size: 11px; font-weight: bold; }
+        .box p { margin: 5px 0; font-size: 12px; color: #666; }
+
+        /* Strategic Section */
+        .vision { border: 3px solid black; text-align: center; padding: 20px; }
+        .strategy { border: 2px solid black; padding: 15px; }
+
+        /* Goals Grid */
+        .goals-grid { display: grid; grid-template-columns: 4fr 80px 80px 60px; gap: 2px; background: black; border: 2px solid black; margin-bottom: 10px; }
+        .goals-grid > div { background: white; padding: 8px; }
+        .goals-header { font-weight: bold; font-size: 11px; text-align: center; }
+
+        /* Roadmap Grid */
+        .roadmap-grid { display: grid; grid-template-columns: 150px 1fr 1fr 1fr; gap: 2px; background: black; border: 2px solid black; }
+        .roadmap-grid > div { background: white; padding: 12px; }
+        .grid-header { font-weight: bold; font-size: 11px; text-align: center; background: #f0f0f0 !important; }
+        .goal-label { font-weight: bold; font-size: 11px; background: #f8f8f8 !important; }
+        .work-cell { font-size: 12px; color: #666; min-height: 60px; }
+    </style>
+</head>
+<body>
+    <h1>Trello Course Roadmap - Q2 2011</h1>
+
+    <!-- Vision (Reference) -->
+    <div class="box vision">
+        <h3>VISION (Reference from Destination)</h3>
+        <p>Work should be visible. When you can see everything laid out in front of you - what's done, what's happening, what's next - collaboration stops feeling like coordination overhead and starts feeling like flow. We believe the simple act of moving a card from 'Doing' to 'Done' should feel satisfying, that teams deserve tools that fade into the background and let the work shine through. We're building the whiteboard that travels with you, the sticky note that never falls off, the shared brain for any team doing anything.</p>
+    </div>
+
+    <!-- Strategy -->
+    <div class="box strategy">
+        <h3>STRATEGY (2-3 Years)</h3>
+
+        <p style="margin-top: 15px;"><strong>Diagnosis:</strong> Project management tools have failed small teams not because of missing features, but because of forced complexity. Teams abandon Basecamp, Jira, and MS Project not because these tools can't do what they need, but because the cognitive overhead of using them exceeds the value of tracking the work. The 30-second learning curve is not a nice-to-have - it's the entire problem we're solving.</p>
+
+        <p style="margin-top: 10px;"><strong>Guiding Principles:</strong></p>
+        <p style="margin-left: 15px;">• When choosing between features and simplicity, we choose simplicity - every new capability must not increase cognitive load for first-time users</p>
+        <p style="margin-left: 15px;">• We'll know we're successful when people teach Trello to colleagues in under 60 seconds without documentation</p>
+        <p style="margin-left: 15px;">• Our approach to product decisions: if it requires explaining in the UI, we haven't designed it simply enough</p>
+        <p style="margin-left: 15px;">• Word-of-mouth growth over paid acquisition - the product experience is our marketing</p>
+
+        <p style="margin-top: 10px;"><strong>Focus Areas:</strong></p>
+        <p style="margin-left: 15px;">• Core board/list/card interaction - make drag-and-drop feel effortless and immediate</p>
+        <p style="margin-left: 15px;">• Real-time collaboration - multiple people on the same board must feel like magic</p>
+        <p style="margin-left: 15px;">• Zero-friction onboarding - from landing page to productive use in under 2 minutes</p>
+        <p style="margin-left: 15px;">• Freemium conversion discovery - understand what power users actually need and will pay for</p>
+
+        <p style="margin-top: 10px;"><strong>Tradeoffs:</strong></p>
+        <p style="margin-left: 15px;">• We will not build Gantt charts, time tracking, or resource management - that's enterprise PM territory we're avoiding</p>
+        <p style="margin-left: 15px;">• We will not add workflow automation or complex rules - teams should adapt Trello to their process, not configure Trello</p>
+        <p style="margin-left: 15px;">• We will defer mobile apps until web product is proven - focus beats breadth in year one</p>
+        <p style="margin-left: 15px;">• We will not pursue enterprise sales - small teams are our beachhead, enterprise comes later</p>
+    </div>
+
+    <div class="goals-grid">
+        <div class="goals-header">Goal</div>
+        <div class="goals-header">Current</div>
+        <div class="goals-header">Target</div>
+        <div class="goals-header">Status</div>
+
+        <div>User Activation: Increase in users who create their first board and add at least 3 cards within 24 hours of signup</div>
+        <div style="text-align: center;">--</div>
+        <div style="text-align: center;">--</div>
+        <div style="text-align: center;">●</div>
+
+        <div>Team Collaboration: Increase in boards with 2+ active collaborators making changes in a 7-day period</div>
+        <div style="text-align: center;">--</div>
+        <div style="text-align: center;">--</div>
+        <div style="text-align: center;">●</div>
+
+        <div>90-Day Retention: Increase in teams still actively using Trello 90 days after first board creation</div>
+        <div style="text-align: center;">--</div>
+        <div style="text-align: center;">--</div>
+        <div style="text-align: center;">●</div>
+    </div>
+
+    <div class="roadmap-grid">
+        <!-- Headers -->
+        <div class="grid-header">Goal</div>
+        <div class="grid-header">NOW<br><span style="font-size: 9px; font-weight: normal;">Deliverables (releasing)</span></div>
+        <div class="grid-header">NEXT<br><span style="font-size: 9px; font-weight: normal;">Solutions (designing)</span></div>
+        <div class="grid-header">LATER<br><span style="font-size: 9px; font-weight: normal;">Investigations (exploring)</span></div>
+
+        <!-- User Activation Row -->
+        <div class="goal-label">User<br>Activation</div>
+        <div class="work-cell">
+            • Launch public beta with Joel on Software announcement (Sep 15)<br>
+            • Onboarding template boards: product roadmap, marketing calendar, personal todo (Aug 30)
+        </div>
+        <div class="work-cell">
+            • Improve first-board experience with better default list names and inline suggestions
+        </div>
+        <div class="work-cell">
+            • Investigate signup friction points: where users drop off between landing page and first useful board
+        </div>
+
+        <!-- Team Collaboration Row -->
+        <div class="goal-label">Team<br>Collaboration</div>
+        <div class="work-cell">
+            • Real-time cursor indicators showing who else is viewing the board (Sep 1)
+        </div>
+        <div class="work-cell">
+            • Enable frictionless board sharing via email/link without signup required<br>
+            • Activity feed on boards showing recent changes/comments
+        </div>
+        <div class="work-cell">
+            • Understand premium collaboration features: what would power teams pay for?
+        </div>
+
+        <!-- 90-Day Retention Row -->
+        <div class="goal-label">90-Day<br>Retention</div>
+        <div class="work-cell">
+            --
+        </div>
+        <div class="work-cell">
+            • Email digests for inactive users (7+ days) to pull them back to active boards
+        </div>
+        <div class="work-cell">
+            • Study abandonment patterns: why teams stop using Trello after initial adoption
+        </div>
+    </div>
+</body>
+</html>

@@ -154,6 +154,66 @@ This log tracks the evolution of the HLCS sailing framework through conversation
 
 ---
 
+## 2025-11-28
+
+### Session 3: Compass Visualization Wireframes
+
+**Created HTML wireframe visualizations for both Compass components:**
+
+**Destination Canvas Wireframe:**
+- Created `compass/destination/visualization.html` - simple black/white wireframe
+- Layout design with visual hierarchy:
+  - Vision (full width, thick border) at top
+  - Problem (2fr) | Solution+Customer stacked (1fr) | Unique Value (2fr) in main row
+  - Timing | Market | Revenue (equal thirds) in context row
+  - Truths | Bets (equal halves, dashed border for Bets) at bottom
+- Minimal CSS, no colors, maximum clarity
+- Final design emphasizes Problem and Unique Value as primary elements
+
+**Course Roadmap Wireframe:**
+- Created `compass/course/visualization.html` - simple black/white wireframe
+- Layout design:
+  - Vision reference (from Destination)
+  - Strategy section (diagnosis, guiding principles, focus areas, tradeoffs)
+  - Goals grid (Goal | Current | Target | Status)
+  - Execution grid (Goal | NOW | NEXT | LATER)
+- Removed capacity allocation, small requests, operational work (not in core schema)
+- Clean grid structure with time-horizoned work organized by goal
+
+**Schema Simplification:**
+- Removed from `course/schema.json`:
+  - `capacityAllocation` (and removed from required fields)
+  - `smallRequests`
+  - `operationalWork`
+  - `mandatedWork`
+- Updated `course/examples/trello-course.json` to match simplified schema
+- Schema now matches visualization exactly - no unused fields
+
+**Example Visualizations with Real Data:**
+- Created `compass/destination/examples/trello-destination-visualization.html`
+  - Filled wireframe with complete Trello Destination data
+  - Shows Vision, Problem/Solution/Customer, Unique Value, Market context, Truths/Bets
+  - Much easier to read than JSON
+- Created `compass/course/examples/trello-course-visualization.html`
+  - Filled wireframe with complete Trello Course data
+  - Shows Strategy, 3 Goals with metrics, NOW/NEXT/LATER work by goal
+  - Demonstrates how goals connect to execution
+
+**Design Process:**
+- Iterated on visual hierarchy and spacing
+- Simplified from initial colorful design to minimal wireframe
+- Adjusted column widths for optimal readability
+- Removed unnecessary sections to focus on core content
+- Result: Clean, scannable layouts that match schema structure
+
+**Impact:**
+- JSON schemas now validated against working visualizations
+- Example data much more accessible and understandable
+- Clear templates for future tool development
+- Trello canonical example complete across both components with visualizations
+
+---
+
 ## 2025-11-25 (approximate)
 
 ### Compass Knowledge Layer v1

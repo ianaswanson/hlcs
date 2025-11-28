@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Course Roadmap</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; max-width: 1400px; }
+        h1 { text-align: center; margin-bottom: 30px; }
+        .box { border: 2px solid black; padding: 15px; margin-bottom: 10px; }
+        .box h3 { margin: 0 0 10px 0; font-size: 11px; font-weight: bold; }
+        .box p { margin: 5px 0; font-size: 12px; color: #666; }
+
+        /* Strategic Section */
+        .vision { border: 3px solid black; text-align: center; padding: 20px; }
+        .strategy { border: 2px solid black; padding: 15px; }
+
+        /* Goals Grid */
+        .goals-grid { display: grid; grid-template-columns: 4fr 80px 80px 60px; gap: 2px; background: black; border: 2px solid black; margin-bottom: 10px; }
+        .goals-grid > div { background: white; padding: 8px; }
+        .goals-header { font-weight: bold; font-size: 11px; text-align: center; }
+
+        /* Roadmap Grid */
+        .roadmap-grid { display: grid; grid-template-columns: 150px 1fr 1fr 1fr; gap: 2px; background: black; border: 2px solid black; }
+        .roadmap-grid > div { background: white; padding: 12px; }
+        .grid-header { font-weight: bold; font-size: 11px; text-align: center; background: #f0f0f0 !important; }
+        .goal-label { font-weight: bold; font-size: 11px; background: #f8f8f8 !important; }
+        .work-cell { font-size: 12px; color: #666; min-height: 60px; }
+    </style>
+</head>
+<body>
+    <h1>Course Roadmap</h1>
+
+    <!-- Vision (Reference) -->
+    <div class="box vision">
+        <h3>VISION (Reference from Destination)</h3>
+        <p>Display vision here for context - single source of truth is in Destination Canvas</p>
+    </div>
+
+    <!-- Strategy -->
+    <div class="box strategy">
+        <h3>STRATEGY (2-5 Years)</h3>
+
+        <p style="margin-top: 15px;"><strong>Diagnosis:</strong> What's systematically broken? What assumptions don't match reality?</p>
+
+        <p style="margin-top: 10px;"><strong>Guiding Principles (2-5):</strong> Decision-making criteria that hold even when technology changes</p>
+
+        <p style="margin-top: 10px;"><strong>Focus Areas:</strong> Broad domains where initiatives will emerge</p>
+
+        <p style="margin-top: 10px;"><strong>Tradeoffs:</strong> What we're choosing NOT to do</p>
+    </div>
+
+    <div class="goals-grid">
+        <div class="goals-header">Goal</div>
+        <div class="goals-header">Current</div>
+        <div class="goals-header">Target</div>
+        <div class="goals-header">Status</div>
+
+        <div>Goal: Specific user behavior change that indicates strategic success</div>
+        <div style="text-align: center;">--</div>
+        <div style="text-align: center;">--</div>
+        <div style="text-align: center;">●</div>
+    </div>
+
+    <div class="roadmap-grid">
+        <!-- Headers -->
+        <div class="grid-header">Goal</div>
+        <div class="grid-header">NOW<br><span style="font-size: 9px; font-weight: normal;">Deliverables (releasing)</span></div>
+        <div class="grid-header">NEXT<br><span style="font-size: 9px; font-weight: normal;">Solutions (designing)</span></div>
+        <div class="grid-header">LATER<br><span style="font-size: 9px; font-weight: normal;">Investigations (exploring)</span></div>
+
+        <!-- Strategic Work Rows -->
+        <div class="goal-label">Goal 1<br>[Name]</div>
+        <div class="work-cell">Concrete deliverables this quarter</div>
+        <div class="work-cell">Solutions being designed</div>
+        <div class="work-cell">Problems to investigate</div>
+
+        <div class="goal-label">Goal 2<br>[Name]</div>
+        <div class="work-cell">Concrete deliverables this quarter</div>
+        <div class="work-cell">Solutions being designed</div>
+        <div class="work-cell">Problems to investigate</div>
+
+        <div class="goal-label">Goal 3<br>[Name]</div>
+        <div class="work-cell">Concrete deliverables this quarter</div>
+        <div class="work-cell">Solutions being designed</div>
+        <div class="work-cell">Problems to investigate</div>
+    </div>
+</body>
+</html>

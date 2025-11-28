@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Compass Destination Canvas</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; max-width: 1400px; }
+        h1 { text-align: center; margin-bottom: 30px; }
+        .box { border: 2px solid black; padding: 15px; }
+        .box h3 { margin: 0 0 10px 0; font-size: 11px; font-weight: bold; }
+        .box p { margin: 5px 0; font-size: 12px; color: #666; }
+
+        /* Row 1 - Hero */
+        .row-vision { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 10px; }
+        .vision {
+            border: 3px solid black;
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        /* Row 2 - Value Prop */
+        .row-value { display: grid; grid-template-columns: 2fr 1fr 2fr; gap: 10px; margin-bottom: 10px; }
+        .problem { min-height: 250px; }
+        .unique-value { min-height: 250px; }
+        .middle-stack { display: flex; flex-direction: column; gap: 10px; height: 100%; }
+        .middle-stack .box { flex: 1; }
+
+        /* Row 3 - Market Context (equal thirds) */
+        .row-market { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+
+        /* Row 4 - Validation (equal halves) */
+        .row-validation { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+        .truths { border-style: solid; }
+        .bets { border-style: dashed; }
+    </style>
+</head>
+<body>
+    <h1>Trello Compass Destination Canvas - 2011</h1>
+
+    <div class="row-vision">
+        <div class="box vision">
+            <h3>VISION</h3>
+            <p>Work should be visible. When you can see everything laid out in front of you - what's done, what's happening, what's next - collaboration stops feeling like coordination overhead and starts feeling like flow. We believe the simple act of moving a card from 'Doing' to 'Done' should feel satisfying, that teams deserve tools that fade into the background and let the work shine through. We're building the whiteboard that travels with you, the sticky note that never falls off, the shared brain for any team doing anything.</p>
+        </div>
+    </div>
+
+    <div class="row-value">
+        <div class="box problem">
+            <h3>PROBLEM</h3>
+            <p><strong>What's the core problem?</strong><br>
+            Teams can't see their work. Project status lives in people's heads, buried in spreadsheets, scattered across email threads, or stuck on whiteboards that don't travel. This invisibility creates constant 'what's the status?' interruptions, duplicated effort, dropped balls, and a persistent low-grade anxiety about whether things are actually getting done.</p>
+
+            <p style="margin-top: 10px;"><strong>How do they solve it today?</strong><br>
+            • Spreadsheets - flexible but not visual, hard to collaborate, get stale<br>
+            • Physical whiteboards and sticky notes - visual but don't travel, can't share remotely<br>
+            • Basecamp - comprehensive but heavyweight, learning curve, opinionated workflow<br>
+            • Email threads - ubiquitous but chaotic, no status visibility, things get lost<br>
+            • Nothing - keep it all in your head, ask people constantly</p>
+
+            <p style="margin-top: 10px;"><strong>Why existing solutions fail:</strong><br>
+            Existing tools force a choice: either powerful-but-complex (Basecamp, MS Project) or simple-but-limited (spreadsheets, sticky notes). The powerful tools require commitment that small teams won't make. The simple tools lack collaboration and real-time visibility. Nothing sits in the sweet spot of 'powerful enough AND instantly usable.'</p>
+
+            <p style="margin-top: 10px;"><strong>Is this big enough to matter?</strong><br>
+            Basecamp has paying customers proving teams will pay for collaboration tools. But adoption is limited by complexity - most teams try these tools and abandon them. The gap between 'people who need to track work' and 'people using work-tracking tools' is massive. We're not competing for Basecamp's customers; we're expanding the market to everyone who gave up on project management software.</p>
+        </div>
+
+        <div class="middle-stack">
+            <div class="box solution">
+                <h3>SOLUTION</h3>
+                <p><strong>What we're building:</strong><br>
+                Web-based kanban boards for any kind of work</p>
+
+                <p style="margin-top: 10px;"><strong>Key capabilities:</strong><br>
+                • Create unlimited boards, lists, and cards<br>
+                • Drag-and-drop cards between lists<br>
+                • Real-time collaboration - see changes as they happen<br>
+                • Comments and attachments on cards<br>
+                • Works in any browser, no installation<br>
+                • Free to use (core features)</p>
+            </div>
+
+            <div class="box customer">
+                <h3>CUSTOMER</h3>
+                <p><strong>Buyer:</strong> Team lead, startup founder, or department head who controls tool decisions</p>
+
+                <p style="margin-top: 8px;"><strong>User:</strong> Individual contributors and team members doing the actual work</p>
+
+                <p style="margin-top: 8px;"><strong>Champion:</strong> The productivity enthusiast who discovers Trello and introduces it to their team</p>
+
+                <p style="margin-top: 8px;"><strong>Key characteristics:</strong><br>
+                • Tech-comfortable but not necessarily developers<br>
+                • Frustrated with current tools being too rigid or too complex<br>
+                • Work in small teams (2-15 people)<br>
+                • Value speed and flexibility over comprehensive features</p>
+            </div>
+        </div>
+
+        <div class="box unique-value">
+            <h3>UNIQUE VALUE PROPOSITION</h3>
+            <p><strong>Why choose us?</strong><br>
+            Instantly usable. No training required. No setup wizard. No workflow configuration. You see a board, you understand it. You can teach someone Trello in 30 seconds by showing them your screen. This isn't a feature - it's the entire product philosophy. Every feature request gets evaluated against 'does this make Trello harder to understand in the first 30 seconds?'</p>
+
+            <p style="margin-top: 10px;"><strong>What's our moat?</strong><br>
+            Simplicity is the hardest thing to copy. Every competitor will be tempted to add features. Product managers justify their existence by shipping features. Sales teams want checkboxes for RFP comparisons. Our moat is the discipline to say no - to keep Trello simple while others make their products complex. This is a cultural moat, not a technical one.</p>
+        </div>
+    </div>
+
+    <div class="row-market">
+        <div class="box timing">
+            <h3>TIMING</h3>
+            <p><strong>Why now?</strong><br>
+            The browser just became powerful enough. HTML5, WebSockets, and modern JavaScript frameworks make it possible to build rich, real-time applications that feel native. Two years ago, the drag-and-drop experience we need wasn't possible in a browser. Two years from now, everyone will be building this. Right now, we can be first.</p>
+
+            <p style="margin-top: 10px;"><strong>Market factors:</strong><br>
+            • Technology: Browser capabilities (drag-and-drop, real-time sync) just matured<br>
+            • Behavioral: Startup boom creating thousands of small teams needing lightweight tools<br>
+            • Market: Freemium model proven by Dropbox, Evernote<br>
+            • Competitive gap: Basecamp proved the market but remains complex<br>
+            • Distribution: Joel Spolsky's audience provides launch platform</p>
+        </div>
+
+        <div class="box market">
+            <h3>MARKET</h3>
+            <p><strong>Beachhead:</strong><br>
+            Small tech teams and startups. They're comfortable with new web tools, frustrated with existing options, have urgency to move fast, and will spread the word to other teams.</p>
+
+            <p style="margin-top: 10px;"><strong>Landscape:</strong><br>
+            • Basecamp - established, respected, but heavyweight<br>
+            • Asana - emerging, task-focused, less visual<br>
+            • Spreadsheets - ubiquitous but not purpose-built<br>
+            • Physical tools - visual but not digital<br>
+            • Vertical tools (Jira) - powerful but developer-specific</p>
+
+            <p style="margin-top: 10px;"><strong>Size (TAM):</strong><br>
+            Beachhead: ~500K small tech teams globally. If 10% adopt and 5% convert to paid, that's $3M ARR from beachhead alone before expansion.</p>
+        </div>
+
+        <div class="box revenue">
+            <h3>REVENUE MODEL</h3>
+            <p><strong>Pricing model:</strong> Freemium. Core product free forever. Paid tiers for power features: integrations, larger attachments, admin controls, priority support.</p>
+
+            <p style="margin-top: 8px;"><strong>Price point:</strong> TBD - launching free, will introduce paid tiers based on usage patterns. Expecting $5-10/user/month for 'Pro' tier.</p>
+
+            <p style="margin-top: 8px;"><strong>Cost drivers:</strong> Hosting/infrastructure, development team (4-6 engineers), minimal support</p>
+
+            <p style="margin-top: 8px;"><strong>Unit economics:</strong> Hypothesis: free users cost ~$0.50/month to serve, paid users worth $50+ LTV, need 10% conversion to be viable.</p>
+        </div>
+    </div>
+
+    <div class="row-validation">
+        <div class="box truths">
+            <h3>TRUTHS (What We Know)</h3>
+            <p>• Fog Creek has resources to fund 18+ months of development without revenue pressure<br>
+            • Joel Spolsky has a large, engaged audience (distribution advantage at launch)<br>
+            • We have engineering talent capable of shipping polished web applications<br>
+            • Freemium is a proven model - Dropbox, Evernote, Spotify have validated it<br>
+            • The kanban pattern is proven in software development contexts<br>
+            • Real-time collaboration in browsers is now technically feasible<br>
+            • Our target users are already online and comfortable adopting web tools</p>
+        </div>
+
+        <div class="box bets">
+            <h3>BETS (What We're Betting)</h3>
+            <p>• Simplicity beats features for our target market at this moment<br>
+            • Visual/spatial organization is universally appealing, not just for developers<br>
+            • People will use a free tool enough to eventually pay for premium features<br>
+            • The 'boards and cards' metaphor is intuitive enough to need no explanation<br>
+            • Word of mouth will be our primary acquisition channel (not sales or ads)<br>
+            • Teams will trust a web app with their work data (security perception)<br>
+            • Free users create paid users through collaboration invites<br>
+            • We can maintain simplicity discipline as the company grows</p>
+        </div>
+    </div>
+</body>
+</html>
